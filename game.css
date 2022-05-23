@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    background-color: #011e40;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: gold;
+}
+
+h1{
+    width: 90%;
+    margin: 70px auto;
+    text-align: center;
+    font-size: 60px;
+}
+
+#game{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto 50px auto;
+}
+
+.block{
+    width: 150px;
+    height: 150px;
+    margin-right: 50px;
+    border-radius: 20px;
+    border: 5px solid black;
+    cursor: pointer;
+}
+
+#green{
+    background-color: green;
+}
+
+#red{
+    background-color: red;
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+#blue{
+    background-color: blue;
+}
