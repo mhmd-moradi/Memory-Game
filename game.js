@@ -52,7 +52,21 @@ window.onload=function(){
         game_pattern.push(level_color);
         animate_block(level_color);
     }
-    
+
+    //animate block function --used whenever selected by the game or clicked by the user--
+    function animate_block(block_id){
+        const block_to_animate = document.getElementById(block_id);
+
+        //toggle background color
+        block_to_animate.style.backgroundColor = "grey";    
+        setTimeout(function(){
+            block_to_animate.style.backgroundColor = block_id;
+        }, 300);
+
+        var audio = new Audio('sounds/'+block_id+'.mp3');   //play the corresponding audio
+        audio.play();
+    }
+
     start_game();
 
 }
