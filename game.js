@@ -12,4 +12,13 @@ window.onload=function(){
     var current_level = 1;
     var current_index = 0;  //to validate the clicked block by user on each click
 
+    // start game function
+    function start_game(){
+        document.body.addEventListener('click', run_game);
+        document.body.addEventListener('keypress', run_game);
+        blocks.forEach(check_clicked_block);  
+    }
+
+    start_game();
+
 }
