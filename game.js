@@ -85,6 +85,21 @@ window.onload=function(){
         });
     }
 
+    // lost function --triggered when user loses --
+    function lost(){
+        title.innerText = "Game Over, Press Any Key To Restart";    //lose message
+        
+        var audio = new Audio('sounds/wrong.mp3');  //play the "wrong" audio
+        audio.play();
+
+        document.body.style.backgroundColor = "red";
+        setTimeout(function(){
+            document.body.style.backgroundColor = "#011e40";
+        }, 100);
+
+        reset_game();   //reset game to play again
+    }
+
     start_game();
 
 }
