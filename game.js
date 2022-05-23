@@ -46,6 +46,13 @@ window.onload=function(){
         return level_color;
     }
 
+    // select block function -- select the block to be clicked by the user --
+    function select_block(){
+        var level_color = set_level_color();
+        game_pattern.push(level_color);
+        animate_block(level_color);
+    }
+    
     start_game();
 
 }
