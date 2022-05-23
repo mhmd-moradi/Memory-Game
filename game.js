@@ -27,7 +27,18 @@ window.onload=function(){
             select_block();
         }
     }
-    
+
+    // next level function
+    function next_level(){
+        if(playing){
+            user_pattern = [];  //empty the pattern array from values stored from the previous level
+            current_index = 0;  //reset index for this level
+            current_level += 1;
+            title.innerText = "Level "+current_level;
+            select_block();
+        } 
+    }
+
     start_game();
 
 }
