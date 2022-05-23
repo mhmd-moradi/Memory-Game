@@ -19,6 +19,15 @@ window.onload=function(){
         blocks.forEach(check_clicked_block);  
     }
 
+    // run game function -- initializes the first level --
+    function run_game(){
+        if(!playing){
+            playing = true;
+            title.innerText = "Level "+current_level; 
+            select_block();
+        }
+    }
+    
     start_game();
 
 }
