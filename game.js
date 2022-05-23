@@ -39,6 +39,13 @@ window.onload=function(){
         } 
     }
 
+    // set level function -- randomly choose one color --
+    function set_level_color(){
+        var random_int = Math.floor(Math.random() * 4);
+        var level_color = colors[random_int];
+        return level_color;
+    }
+
     start_game();
 
 }
