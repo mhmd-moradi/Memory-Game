@@ -67,6 +67,24 @@ window.onload=function(){
         audio.play();
     }
 
+    // click on block event
+    function check_clicked_block(block){
+        block.addEventListener("mousedown", function(){
+            if(playing){
+                animate_block(this.id); //animate clicked block
+                user_pattern.push(this.id);
+                if(user_pattern[current_index] != game_pattern[current_index])  //if clicked block is not the same following the game pattern sequence
+                    lost();
+                else{
+                    current_index += 1; //to check the next one
+                    if(user_pattern.length === game_pattern.length){ 
+                        setTimeout(next_level, 500);    //go to next level when the user guesses successfully the whole pattern for the corresponding level
+                    }
+                }
+            }
+        });
+    }
+
     start_game();
 
 }
