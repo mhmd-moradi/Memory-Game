@@ -100,6 +100,18 @@ window.onload=function(){
         reset_game();   //reset game to play again
     }
 
+    //reset game function
+    function reset_game(){
+        current_level = 1;
+        current_index = 0;
+        user_pattern = [];
+        game_pattern = [];
+
+        setTimeout(function(){  //set timeout to prevent the event listeners from being executed immediately
+            playing = false;
+        }, 300);
+    }
+
     start_game();
 
 }
